@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Metas -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Расчет стоимости доставки</title>
+  <meta name="description" content="Здесь Вы можете рассчитать стоимость доставки различными транспортными компаниями и выбрать более приемлемый для Вас вариант.">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+</body>
+</html>
+
+</head>
+
+<body>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.change-city').on('click', function(e) {
+        e.preventDefault();
+
+        changeCity();
+      });
+  })
+function changeCity() {
+  $otpravka = $("#otpravka").val();
+  $dostavka = $("#dostavka").val();
+  $("#otpravka").val($dostavka);
+  $("#dostavka").val($otpravka);
+};
+</script>
+<style type="text/css">
+* {box-sizing: border-box;}
+body {background: #f69a73;}
+.decor {
+  position: relative;
+  max-width: 400px;
+  margin: 50px auto 0;
+  background: white;
+  border-radius: 30px;
+}
+.form-left-decoration,
+.form-right-decoration {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background: #f69a73;
+  border-radius: 20px;
+}
+.form-left-decoration {
+  bottom: 60px;
+  left: -30px;
+}
+.form-right-decoration {
+  top: 60px;
+  right: -30px;
+}
+.form-left-decoration:before,
+.form-left-decoration:after,
+.form-right-decoration:before,
+.form-right-decoration:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  border-radius: 30px;
+  background: white;
+}
+.form-left-decoration:before {top: -20px;}
+.form-left-decoration:after {
+  top: 20px;
+  left: 10px;
+}
+.form-right-decoration:before {
+  top: -20px;
+  right: 0;
+}
+.form-right-decoration:after {
+  top: 20px;
+  right: 10px;
+}
+.circle {
+  position: absolute;
+  bottom: 80px;
+  left: -55px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+}
+.form-inner {padding: 50px;}
+.form-inner input,
+.form-inner textarea {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+.form-inner input[type="submit"] {
+  margin-top: 30px;
+  background: #f69a73;
+  border-bottom: 4px solid #d87d56;
+  color: white;
+  font-size: 14px;
+}
+.form-inner textarea {resize: none;}
+.form-inner h3 {
+  margin-top: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #707981;
+}
+.form-img-zamena {
+  height: 20px;
+  margin: 0px 5px 5px 5px;
+}
+h5 {
+  margin-top: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #707981;
+  margin-bottom: 10px;
+}
+.change-city {
+  width: 200px;
+  display: flex;
+  text-decoration: none;
+  border: none;
+}
+
+.form-item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.form-item input {
+  width: 90%;
+  outline: none;
+}
+
+.form-item span {
+  width: 10%;
+}
+</style>
+<form class="decor">
+  <div class="form-left-decoration"></div>
+  <div class="form-right-decoration"></div>
+  <div class="circle"></div>
+  <div class="form-inner">
+    <h3>Рассчитать стоимость доставки</h3>
+    <input type="text" id="otpravka" placeholder="Город отправки">
+    <a href="#" class="change-city" id="zamena">
+      <img src="zamena.svg" class="form-img-zamena"> <h5>Поменять города</h5> </a> 
+      <input type="text" id="dostavka" placeholder="Город доставки">
+      <div class="form-item">
+        <input type="text">
+        <span>см</span>
+      </div>
+      <input type="number" id="dlina" placeholder="Длина" class="cm3"> <h5>см</h5>
+      <input type="number" id="shirina" placeholder="Ширина"><h5>см</h5>
+      <input type="number" id="vasota" placeholder="Высота"><h5>см</h5>
+      <input type="number" id="obem" placeholder="Объем"><h5>см<sup>3</sup></h5>
+      <input type="submit" value="Отправить">
+    </div>
+  </form>
+</body>
+
+</html>
