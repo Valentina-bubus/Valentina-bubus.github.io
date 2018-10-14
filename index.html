@@ -10,9 +10,11 @@
     <meta name="description" content="Здесь Вы можете рассчитать стоимость доставки различными транспортными компаниями и выбрать более приемлемый для Вас вариант.">
     <script src="js/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/jquery.ba-throttle-debounce.js"></script>
     <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
+	<iframe src="//vk.com/video_ext.php?oid=-57876954&id=456272950&hash=2765bc5db32a57e9&hd=2" width="853" height="480" frameborder="0" allowfullscreen></iframe>
     <form class="decor">
         <div class="form-left-decoration"></div>
         <div class="form-right-decoration"></div>
@@ -25,7 +27,7 @@
             </a> 
             <input type="text" class="city-delivery" placeholder="Город доставки">
             <div class="form-item">
-                <input type="text" class="length" placeholder="Длина">
+                <input type="text" class="length" placeholder="Длина" pattern="[0-9]">
                 <span>см</span>
             </div>
             <div class="form-item">

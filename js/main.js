@@ -2,9 +2,13 @@ $(document).ready(function() {
     $('.change-city').on('click', function(e) {
         e.preventDefault();
         changeCity();
-        calculateVolume();
       });
-  })
+
+    $(".height").keyup($.debounce(250, function(f) {
+        calculateVolume();
+    }));
+
+  });
 
 function changeCity() {
     $city_sending = $(".city-sending").val();
@@ -14,10 +18,10 @@ function changeCity() {
 };
 
 function calculateVolume() {
-    $lenght = $(".lenght").val();
+    $length = $(".length").val();
     $width = $(".width").val();
     $height = $(".height").val();
-    $volume = $lenght * $width * $height
+    $volume = $length * $width * $height;
     if ($volume>0) {
         $(".volume").val($volume);
     }
