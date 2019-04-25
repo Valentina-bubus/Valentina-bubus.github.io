@@ -1,5 +1,27 @@
-* {box-sizing: border-box;}
-body {background: #f69a73;}
+@font-face {
+    font-family: "Roboto";
+    src: url("Roboto/RobotoRegular/RobotoRegular.eot");
+    src: url("Roboto/RobotoRegular/RobotoRegular.eot?#iefix")format("embedded-opentype"),
+    url("Roboto/RobotoRegular/RobotoRegular.woff") format("woff"),
+    url("Roboto/RobotoRegular/RobotoRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    }
+
+@font-face {
+    font-family: "RobotoLight";
+    src: url("Roboto/RobotoRegular/RobotoLight.eot");
+    src: url("Roboto/RobotoRegular/RobotoLight.eot?#iefix")format("embedded-opentype"),
+    url("Roboto/RobotoRegular/RobotoLight.woff") format("woff"),
+    url("Roboto/RobotoRegular/RobotoLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    }
+
+body {
+    background: #f69a73;
+    margin: 0;
+}
 .decor {
     position: relative;
     max-width: 400px;
@@ -131,51 +153,41 @@ h5 {
 }
 .info{
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 15px;
-    color: #707981;
-    width: 90%;
-    margin: auto;
-    padding: 20px;
-    border: solid 5px white;
-    border-radius: 20px;
-    text-align: center;
-    font-weight: 500;
-    font-size: 20px;
-    margin-top: 40px;
+    background-color: #ffffff;
 }
 
 .image {
-    position: absolute;
-    left: 10px;
-    top: 22px;
-    width: 136px;
-    height: 157px;
-    background: url(../img/delivery-van.png) no-repeat 0 0;
+    width: 39%;
+    height: 300px;
+    background: url(../img/car.png) no-repeat 0 0;
+    display: inline-block;
+    margin: 0 auto;
+    background-position: center; 
 }
 
-@media screen and (max-width: 980px) and (min-width: 780px), screen and (max-width: 690px) .image {
-    position: static;
-    left: auto;
-    top: auto;
-    margin: -64px auto 12px;
+.text {
+    display: inline-block;
+    width: 60%;
+    font-family: 'Roboto', sans-serif;
+    color: #707981;
 }
 
-div .text {
-    position: relative;
-    width: 90%;
-    margin: auto;
-}
-
-div .text a{
-    color: #e9eff6; */
-    cursor: none;
+.goform {
     text-decoration: none;
+    padding: 10px;
+    color: #fff;
+    background: #f69a73;
+    border-radius: 4px;
 }
 
-div .line {
-    height: 3px;
-    background: white;
-    border-radius: 2px;
-    margin: 10px 0 10px 0;
+.goform:hover {
+  box-shadow: 0 0 5px black;
+  background: linear-gradient(to top, #f69a73, #f69a73);
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #f69a73;
 }
